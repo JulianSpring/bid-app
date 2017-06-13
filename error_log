@@ -1,0 +1,6 @@
+[13-Jun-2017 05:28:06 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admin'@'localhost' (using password: YES) in /home/juliawvv/public_html/fish/inc-conn.php on line 16
+[13-Jun-2017 05:28:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/juliawvv/public_html/fish/home.php:40) in /home/juliawvv/public_html/fish/inc-conn.php on line 21
+[13-Jun-2017 05:28:33 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admin'@'localhost' (using password: YES) in /home/juliawvv/public_html/fish/inc-conn.php on line 16
+[13-Jun-2017 05:28:33 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/juliawvv/public_html/fish/home.php:40) in /home/juliawvv/public_html/fish/inc-conn.php on line 21
+[13-Jun-2017 05:28:37 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'admin'@'localhost' (using password: YES) in /home/juliawvv/public_html/fish/inc-conn.php on line 16
+[13-Jun-2017 05:28:37 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/juliawvv/public_html/fish/home.php:40) in /home/juliawvv/public_html/fish/inc-conn.php on line 21

@@ -1,0 +1,331 @@
+@charset "utf-8";
+
+@import url("html-css-reset.css");
+
+/* The first part is to condition our <body> tag in CSS so that there are no margins and the height will always remain 100% of the screen. This will ensure that the greatest amount of screen is available for use. */
+    html, body {
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+/* Ensure that a vertical scroll bar is always displayed in the browser. Because the proportions of the website are all relative, the sudden appearance of a scroll bar (which could be triggered by an interactive component on your website) will cause your site to jump. In CSS, we can use this simple trick to ensure that the bar is always there, thus preventing jumping. */
+    html {
+        overflow-y: scroll;
+        font-size: 1rem;
+    }
+
+/* In order for images to fit within any screen, they need to be scaled. There are several ways to do this but a good starting point is to make all images have a width of 100%. */
+    img {
+        max-width: 100%;
+        border-style: none;
+    }
+
+/* Unfortunately, max-width is not supported in older versions of Internet Explorer, so a conditional comment is also included, denoted with an asterisk. */
+    *img {
+        width: 100%;
+        border-style: none;
+    }
+
+/* The 'clearfix' class clears a row of floated boxes. */
+    .clearfix {
+        clear: both;
+        font-size: 0;
+        line-height: 0;
+        margin: 0;
+        padding: 0;
+        display: table;
+        content: "";
+    }
+
+
+
+
+/*#####################################################################################
+#######################################################################################
+
+    SMARTPHONE PORTRAIT LAYOUT AND LANDSCAPE LAYOUT: 0px - 480px
+
+#######################################################################################
+#####################################################################################*/
+@media only screen and (min-width: 0px) {
+
+	body {
+		background-color: #064789;
+	}
+
+    header
+    {
+        background-color: #679436;
+        color: #fff;
+        padding: 20px 20px;
+        font-size: 2.5rem;
+        box-shadow: 0 2px 10px #222;
+    }
+
+    .wrapper {
+        width: 96%;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        background-color: #064789;
+        color: #fff;
+    }
+
+    .wrapper h1
+    {
+        font-size: 3rem;
+        margin-top: 30%;
+        text-align: center;
+        text-shadow: 2px -2px 10px #222;
+    }
+
+    .wrapper p
+    {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .btnpos
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }  
+
+    .btn-signup
+    {
+        text-decoration: none;
+        cursor: pointer;
+        color: #fff;
+        display: inline-block;
+        margin: 50px 10px;
+        padding: 15px 20px;
+        border: solid #679436;
+        font-size: 1.7rem;
+        box-shadow: 0 2px 10px #222;
+        background-color: #679436;
+    }
+
+    .btn-explore
+    {
+        cursor: pointer;
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        margin: 50px 0;
+        padding: 15px 20px;
+        border: solid #679436;
+        font-size: 1.7rem;
+        box-shadow: 0 2px 10px #222;
+    }
+
+    /*SIGN IN FORM*/
+
+    .sign-up-form, .login-form
+    {
+        background-color: #679436;
+        
+        box-shadow: 0 2px 10px #222;
+    }
+
+    .sign-up-form h2, .login-form h2
+    {
+        font-size: 2rem;
+        margin: 9%;
+        padding: 10px 0;
+    }
+
+    .sign-up-form label, .login-form label
+    {
+        margin: 9%;
+        font-size: 1.8rem;
+
+    }
+
+    .sign-up-form input, .login-form input
+    {
+        width: 80%;
+        margin: 10px 9%;
+        height: 42px;
+        border-style: none;
+    }
+    .sign-up-form input[type=submit], .login-form input[type=submit]
+    {
+        width: 80%;
+        font-size: 1.2rem;
+        margin: 10px 9%;
+        height: 50px;
+        border-style: none;
+        font-size: 2rem;
+        background-color: #777;
+        color: #fff;
+        box-shadow: 0 2px 10px #222;
+    }
+
+}
+
+
+
+
+/*#####################################################################################
+#######################################################################################
+
+    TABLET PORTRAIT LAYOUT: 481px - 800px
+    INHERIT STYLES FROM SMARTPHONE LAYOUT
+
+#######################################################################################
+#####################################################################################*/
+@media only screen and (min-width: 481px) {
+
+	body {
+		background-color: #064789;
+	}
+
+    header
+    {
+
+    }
+
+}
+
+
+
+
+/*#####################################################################################
+#######################################################################################
+
+    TABLET LANDSCAPE LAYOUT AND DESKTOP MONITOR LAYOUT: 801px - 1300px
+    INHERIT STYLES FROM SMARTPHONE LAYOUT AND TABLET LAYOUT
+
+#######################################################################################
+######################################################################################*/
+@media only screen and (min-width: 801px) {
+
+	body {
+		background-color: #064789;
+	}
+    .wrapper {
+        width: 96%;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        background-color: #064789;
+        color: #fff;
+    }
+
+    .wrapper h1
+    {
+        font-size: 3rem;
+        margin-top: 10%;
+        text-align: center;
+        text-shadow: 2px -2px 10px #222;
+    }
+
+    .wrapper p
+    {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .btnpos
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }    
+    .btn-signup
+    {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        padding: 15px 20px;
+        border: solid #679436;
+        font-size: 1.7rem;
+        box-shadow: 0 2px 10px #222;
+        background-color: #679436;
+    }
+
+    .btn-explore
+    {
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+
+        padding: 15px 20px;
+        border: solid #679436;
+        font-size: 1.7rem;
+        box-shadow: 0 2px 10px #222;
+    }
+
+    .hiddenform
+    {
+        display: flex;
+        
+        justify-content: center;
+    }
+
+    .sign-up-form, .login-form
+    {
+        background-color: #679436;
+        margin: 15px;
+        
+        float: left;
+        box-shadow: 0 2px 10px #222;
+    }
+
+    /*HOME PAGE*/
+
+    .content
+    {
+        margin: 0 auto;
+        width: 95%;
+       
+
+    }
+
+    .item
+    {
+        
+        width: 265px;
+        font-size: 1.4rem;
+        color: #fff;
+        margin: 25px 5%;
+        float: left;
+        box-shadow: 0 4px 10px #222;
+        box-sizing: border-box;
+        background-color: #679436;
+        text-align: center;
+    }
+
+    .item .btn-bid
+    {
+        border-style: none;
+        height: 50px;
+        width: 100px;
+        border: solid 1px #427AA1;
+        background-color: #427AA1;
+    }
+
+}
+
+
+
+
+/*#####################################################################################
+#######################################################################################
+
+    DESKTOP MONITOR LAYOUT AND SMART TV: 1300px - 10 000px
+    INHERIT STYLES FROM SMARTPHONE LAYOUT, TABLET LAYOUT AND DESKTOP MONITOR LAYOUT
+
+#######################################################################################
+#####################################################################################*/
+@media only screen and (min-width: 1300px) {
+
+    body {
+        background-color: #064789;
+    }
+		
+}
+
+
