@@ -21,6 +21,8 @@
 		<br><br>
 
 		<input type="submit" name="submit" value="Submit">
+
+		<p>Already have an account? <a class='login-from-sign'>Login!</a><p>
 		<br><br>
 	</form>
 </section>

@@ -2,7 +2,7 @@
 include ('inc-conn.php');
 session_start();
 
-if (isset($_POST['submit']))
+if (isset($_POST['submit']) && isset($_SESSION['loggedin']))
 { 
 	$id = $_POST['id'];
 	$bidVal = $_POST['bidVal'];
@@ -40,6 +40,8 @@ if (isset($_POST['submit']))
 		echo 'error'. mysqli_query($conn);
 	}
 }
+else
+	echo "login in please";
 
 
 ?>

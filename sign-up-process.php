@@ -1,5 +1,5 @@
 <?php
-include ('inc-conn.php');
+
 session_start();
 if (isset($_POST['submit']))
 {
@@ -14,12 +14,13 @@ if (isset($_POST['submit']))
 		exit();
 	}
 
+	
 	$pwd = password_hash($pwd, PASSWORD_DEFAULT);
 
 	// STILL NEED TO CHECK IF EMAIL IS IN USE
 	// USING EMAIL AS UNIQE KEY
 	// EMIAL IS UNIQUE IN DATABASE
-
+	include ('inc-conn.php');
 	$sql = "INSERT INTO tbl_user (name, email, password)
 			VALUES ('$firstname', '$email', '$pwd')";
 

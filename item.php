@@ -13,10 +13,10 @@ if ($results = mysqli_query($conn, $sql))
 				<h1>Current Bid ".$row['currentbid']."</h1>
 				<h2>".$row['name']. " " .$row['author']."</h2>
 				<input type='submit' class='btn-bid' value='bid!''>
-				<div class='bidop'>
+				<div class='bidop' hidden>
 					<form action='bid-process.php' method='post'>
-						<label >Bid amount</label>
-						<input type='text' name='bidVal'>
+						<label >Bid amount</label><br>
+						<input type='number' name='bidVal' required>
 
 
 						<input value=".$row["id"]." name='id' hidden>
@@ -26,7 +26,10 @@ if ($results = mysqli_query($conn, $sql))
 			</div>";
 	}
 }
+mysqli_close($conn);
 ?>
+
+
 
 <script>
 //HIDE/DISPLAY THE INPUT BOXES ON THE CARDS

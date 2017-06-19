@@ -1,11 +1,12 @@
 <?php
-include ('inc-conn.php');
+
 session_start();
 if (isset ($_POST['submit']))
 {
 	$email = $_POST['email'];
 	$pwd = $_POST['pwd'];
 
+	include ('inc-conn.php');
 	$sql = "SELECT name, email, password FROM tbl_user WHERE email='$email'";
 
 	if ($result = mysqli_query($conn, $sql))

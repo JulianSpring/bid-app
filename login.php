@@ -1,23 +1,77 @@
-<section class='login-form'>
+<div class="container">
 
-	<h2>Login</h2>
-	<form action='login-process.php' method='post'>
+	<div id="modal" class="popupContainer" style="display:none;">
+			<header class="popupHeader">
 
-		<label for="email" value="email">email</label>
-		<input type="text" name="email" required>
-		<br><br>
+				<div class="one_half last"><a href="#" id="register_form" class="btn">Sign up</a></div>	
+				<div class="one_half"><a href="#" id="login_form" class="btn">Login</a></div>
+					
+			</header>
 
-		<!-- CHANGE type to password later -->
-		<label for="password" value="password">password</label>
-		<input type="text" name="pwd" required>
-		<br><br>
+			<section class="popupBody">
 
-		<input type="submit" name="submit" value="Submit">
-	</form>
-</section>
+					<div class="social_login">
 
-<script type="text/javascript">
-	
-//AJAX TEST
+					</div>
 
-</script>
+					<!-- Username & Password Login form -->
+					<div class="user_login">
+							<form action="login-process.php" method="post">
+									<label>Email</label>
+									<input type="text" name="email">
+									<br >
+
+									<label>Password</label>
+									<input type="password" name="pwd">
+									<br >
+
+									<div class="checkbox">
+											<input id="remember" type="checkbox" >
+											<label for="remember">Remember me</label>
+									</div>
+
+									<div class="action_btns">
+										<input type="submit" name="submit" class="btn btn_red">
+									</div>
+							</form>
+
+							<a href="#" class="forgot_password">Forgot password?</a>
+					</div>
+
+					<!-- Register Form -->
+					<div class="user_register">
+							<form action="sign-up-process.php" method="post">
+									<label>Full Name</label>
+									<input type="text" name="firstname" required>
+									<br>
+
+									<label>Email Address</label>
+									<input type="email" name="email" required>
+									<br>
+
+									<label>Password</label>
+									<input type="password" name="pwd" required>
+									<br>
+
+									<label>Confirm Password</label>
+									<input type="password" name="conpwd" required>
+									<br>
+
+									<div class="checkbox">
+											<input id="send_updates" type="checkbox" required>
+											<label for="send_updates">Agree To <a href="#">Terms and Conditions</a></label>
+
+									</div>
+
+									<div class="action_btns">
+										<input type="submit" name="submit" class="btn btn_red">
+										
+									</div>
+							</form>
+					</div>
+			</section>
+	</div>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://andwecode.com/wp-content/uploads/2015/10/jquery.leanModal.min_.js'></script>
+<script src="js/index.js"></script>

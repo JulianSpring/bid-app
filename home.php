@@ -28,6 +28,14 @@
 <!-- LOAD CUSTOM JAVASCRIPT FILE -->
 <script src="javascript/main.js"></script>
 
+<!-- LINK MODAL WINDOW -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+		
+<link rel="stylesheet" href="css/style.css">
+
 <!-- LINK TO EXTERNAL CSS FILE -->
 <link href="css/public.css" rel="stylesheet" type="text/css">
 
@@ -38,7 +46,6 @@
 <header>
 	<h1>Home</h1>
 	<?php
-
 	if (isset ($_SESSION['loggedin']))
 	{
 		echo 'welcome ' . $_SESSION['name'].'<br>';
@@ -46,11 +53,15 @@
 	}
 	else
 	{
-		echo '<a href="index.php">Login/Signup</a>';
+		echo '<a id="modal_trigger" href="#modal" class="btn-signup">Sign-Up/Login</a>';
 	}
 
 	?>
 </header>
+<div class="login">
+	<?php require ('login.php'); ?>
+</div>
+
 
 <section class="content">
 	<?php include ('item.php'); ?>

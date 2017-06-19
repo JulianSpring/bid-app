@@ -3,8 +3,8 @@
 /*$server 	= '197.242.144.19';
 $user 		= 'juliawvv_fishpro';
 $password 	= 'R]8eWuv6Nv{O';
-$db 		= 'juliawvv_fish';
-*/
+$db 		= 'juliawvv_fish';*/
+
 $server 	= 'localhost';
 $user 		= 'admin';
 $password 	= 'password';

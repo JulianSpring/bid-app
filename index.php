@@ -32,6 +32,14 @@
 <!-- LOAD CUSTOM JAVASCRIPT FILE -->
 <script src="javascript/main.js"></script>
 
+<!-- LINK MODAL WINDOW -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+		
+<link rel="stylesheet" href="css/style.css">
+
 <!-- LINK TO EXTERNAL CSS FILE -->
 <link href="css/public.css" rel="stylesheet" type="text/css">
 
@@ -40,46 +48,29 @@
 <body>
 
 <header>
-	<h1>Fish Art</h1>
+	<h1>Fish Out Of Water</h1>
 </header>
 
 <section class="wrapper">
-	<h1>Welcome</h1>
-	<p>Short what this site is about</p>
-
+	<div class="word-content">
+		<h1>Welcome</h1>
+		<p>Short what this site is about</p>
+	</div>
 
 	<div class="btnpos">
-		<a class='btn-signup'>Sign-up</a>
+		<a id="modal_trigger" href="#modal" class="btn-signup">Sign-Up</a>
+
 		<a class='btn-explore' href='home.php'>Explore Abit</a>
 	</div>
 
 	<div class="hiddenform">
 
-		<div class="signup">
-			<?php require ('sign-up.php'); ?>
-		</div>
-
 		<div class="login">
 			<?php require ('login.php'); ?>
 		</div>
-
+		
 	</div>
-
-	
-	
-
 </section>
-<script type="text/javascript">
 
-$(".hiddenform").hide();
-
-$(document).ready(function(){
-    $(".btn-signup").click(function(){
-
-    	$(".hiddenform").slideToggle();
-    });
-});
-
-</script>
 </body>
 </html>
